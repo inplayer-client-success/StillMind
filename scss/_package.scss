@@ -1,10 +1,6 @@
 .package-container {
 	text-align: center;
 
-	a.overlay-link {
-		margin: 10px;
-	}
-
 	.package {
 		.package-items {
 			display: flex;
@@ -82,9 +78,7 @@
 				} // item label
 
 				&:hover {
-					box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.2);
-					// transform: translateY(-3px);
-					// box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.2);
+					transform: translateY(-3px);
 				}
 			} // package item
 

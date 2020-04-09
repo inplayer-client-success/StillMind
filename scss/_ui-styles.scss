@@ -25,8 +25,8 @@
 	min-height: 100vh;
 }
 
-.mh-80vh {
-	min-height: 80vh;
+.mh-70vh {
+	min-height: 70vh;
 }
 
 .bg-img {
@@ -36,12 +36,13 @@
 }
 
 .bg-item {
-	background: linear-gradient(
-		80deg,
-		rgba(255, 255, 255, 1) 0%,
-		rgba(191, 246, 160, 1) 40%,
-		rgba(132, 188, 100, 1) 100%
-	);
+	// background: linear-gradient(
+	// 	80deg,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(191, 246, 160, 1) 40%,
+	// 	rgba(132, 188, 100, 1) 100%
+	// );
+	background-image: url("../img/header-item.jpg");
 }
 
 .bg-white {

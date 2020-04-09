@@ -43,10 +43,15 @@
 				} // content
 
 				.item-label {
-					color: #222;
-					text-align: left;
+					// color: #222;
+					// text-align: left;
 					z-index: 11;
-					padding: 12px 22px;
+					padding: 10px;
+
+					position: absolute;
+					top: 65%;
+					left: 10%;
+					color: white;
 
 					h3 {
 						font-family: $font1;
@@ -91,7 +96,3 @@
 		} // package items
 	} // package
 } // package container
-
-.inplayer-button {
-	background-color: var(--primary) !important;
-}

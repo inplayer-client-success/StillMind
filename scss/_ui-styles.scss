@@ -36,12 +36,9 @@
 }
 
 .bg-item {
-	background: linear-gradient(
-		80deg,
-		rgba(255, 255, 255, 1) 0%,
-		rgba(191, 246, 160, 1) 40%,
-		rgba(132, 188, 100, 1) 100%
-	);
+	background: url('../img/header-item.jpg');
+	background-position: center;
+	background-size: cover;
 }
 
 .bg-white {

@@ -1,0 +1,14 @@
+:root {
+	--dark: #20201c;
+	--primary: #84bc64;
+	--radius: 5px;
+}
+
+@font-face {
+	font-family: "Avenir";
+	src: url("../fonts/AvenirLTStd-Medium.otf") format("opentype");
+	font-weight: normal;
+}
+
+$font1: "Avenir", sans-serif;
+$font2: "brandon-grotesque", sans-serif;

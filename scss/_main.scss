@@ -106,6 +106,8 @@ body {
 @media (max-width: 789px) {
 	#nav-wrapper {
 		padding: 0;
+		position: relative;
+		background-color: white;
 		.nav-container {
 			padding: 0 70px;
 			ul {

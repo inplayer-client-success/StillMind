@@ -350,86 +350,12 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="js/paywall.js"></script>
 
 
   <script type="text/javascript">
 
-    var config = {
-      packages: [
-        "95783",
-        "95454"
-      ],
-      service_url: "https://services.inplayer.com"
-    }
-
     var paywall = new InplayerPaywall('ab4e6b90-e38c-418b-a4a5-95a1dc59422a', [{ id: 95780 }]);
-
-    $('.inplayer-paywall-logout').hide();
-
-    paywall.on('authenticated', function () {
-      $('.inplayer-paywall-login').parent().hide();
-      $('.inplayer-paywall-logout').parent().show();
-    });
-
-    paywall.on('logout', function () {
-      location.reload();
-    });
-
-
-
-    function createItemElement(assetId, assetPhoto, assetTitle) {
-      var output =
-        '<div class="package-item"><div class="content" style="background-image:url(' +
-        assetPhoto +
-        ')">';
-      output +=
-        '<a href="./item.html?id=' +
-        assetId +
-        '" class="overlay-link"></a></div><div class="item-label"><div class="name">';
-      output += assetTitle;
-      output += "</div>";
-      output += "</div></div>";
-      return output;
-    }
-
-    config.packages.forEach((package, i) => {
-      $.get(config.service_url + "/items/packages/" + package, response => {
-        // console.log(response.id)
-        var packageTitle = response.title;
-
-        $("#package-title-" + package).html(packageTitle);
-
-        $.get(
-          config.service_url + "/items/packages/" + package + "/items?limit=500",
-          response => {
-            console.log($('#package-title-' + package))
-
-            var output = "";
-
-            for (var i = 0; i < response.collection.length; i++) {
-              var asset = response.collection[i];
-              // console.log(asset.title)
-
-              var assetId = asset.id;
-              var assetPhoto = asset.metahash.paywall_cover_photo;
-              var assetTitle = asset.title;
-              output += createItemElement(assetId, assetPhoto, assetTitle);
-
-              document.getElementById(
-                "package-items-" + package
-              ).innerHTML = output;
-
-              // console.log(config.packages.length);
-              // console.log(response.collection.length);
-            } // for
-
-
-          }
-        ); // get items
-      }); // get packages
-    }); //for each
-
-
 
 
   </script>
